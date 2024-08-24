@@ -1,4 +1,7 @@
-import { debounce, setDayOrNight } from './utils';
+import React, { useEffect } from 'react'; // Import useEffect
+import { setDayOrNight } from './utils/utils';
+import { debounce } from './utils/Debounce';
+import App from './App'; // Import App
 
 function Main() {
   useEffect(() => {

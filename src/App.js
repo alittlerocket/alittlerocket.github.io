@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 import Sky from './components/Sky';
 import DateTimeWrapper from './components/DateTimeWrapper';
 import Lake from './components/Lake';
 
 function App() {
     return (
-      <div className="relative h-screen margin-0">
+      <div className="bg-[#10101E] items-center relative h-screen flex">
         <Sky />
         <Lake />
         <DateTimeWrapper />

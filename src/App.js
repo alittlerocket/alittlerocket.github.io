@@ -5,7 +5,7 @@ import Lake from './components/Lake';
 
 function App() {
     return (
-      <div className="bg-[#10101E] items-center relative h-screen flex">
+      <div className="items-center relative h-screen flex">
         <Sky />
         <Lake />
         <DateTimeWrapper />

@@ -2,9 +2,9 @@ import React from 'react';
 
 function Sky() {
   return (
-    <div className="bg-gradient-to-b from-day-start to-day-end relative h-full w-auto z-10">
+    <div className="sky relative h-screen w-screen z-10">
       <div className="clouds relative h-screen top-0 z-10">
-        <img src="./assets/images/cloud.png" alt="cloud" className="absolute h-3/5 overflow-hidden object-cover"/>
+        <img src="./assets/images/cloud.png" alt="cloud" className="absolute h-2/5 overflow-hidden object-cover"/>
       </div>
       <div className="sun absolute w-24 h-24 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full shadow-lg" style={{ top: '20%', left: '50%', transform: 'translateX(-50%)' }}></div>
       <div className="moon absolute w-24 h-24 bg-gradient-to-br from-gray-400 to-gray-600 rounded-full shadow-lg opacity-0" style={{ top: '20%', left: '50%', transform: 'translateX(-50%)' }}></div>

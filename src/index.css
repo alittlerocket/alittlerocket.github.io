@@ -1,3 +1,124 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* 
+{
+    margin: 0;
+    padding: 0;
+}
+
+hr 
+{
+    width: 50px;
+    border-color: transparent;
+    border-right-color: rgba(255, 255, 255, 0.7);
+    border-right-width: 50px;
+    position: absolute;
+    bottom: 100%;
+    transform-origin: 100% 50%;
+    animation-name: rain;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rain 
+{
+    from {
+        transform: rotate(105deg) translateX(0);
+    }
+    to {
+        transform: rotate(105deg) translateX(calc(100vh + 20px));
+    }
+}
+
+/* Day-specific styles */
+body.day .sky {
+    background: linear-gradient(to bottom, #87CEEB, #A0E0FF);
+}
+
+body.day .lake {
+    background: linear-gradient(to bottom, rgba(0, 0, 25, 0.7), rgba(0, 0, 80, 0.9));
+}
+
+body.day .datetime {
+    border: 3px solid #41dc8e;
+}
+
+body.day .stars,
+body.day .moon {
+    opacity: 0;
+}
+
+body.day .sun {
+    opacity: 1;
+}
+
+/* Night-specific styles */
+body.night .sky {
+    background: linear-gradient(to bottom, #000033, #000080);
+}
+
+body.night .lake {
+    background: linear-gradient(to bottom, rgba(0, 0, 25, 0.7), rgba(0, 0, 80, 0.9));
+}
+
+body.night .datetime {
+    border: 3px solid #2E94E3;
+}
+
+body.night .stars,
+body.night .moon {
+    opacity: 1;
+}
+
+body.night .sun {
+    opacity: 0;
+}
+
+/*  Reflection */
+.datetime.reflection 
+{
+    transform: scaleY(-1);
+    opacity: 0.5;
+    filter: blur(2px);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), transparent);
+    pointer-events: none;
+}
+
+.datetime:hover,
+.datetime:hover + .reflection 
+{
+    background: #2E94E3;
+    box-shadow: 0 0 30px #2E94E3;
+}
+
+/* Time */
+.time span:not(:last-child) 
+{
+    position: relative;
+    margin: 0 6px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.time span:last-child 
+{
+    background: #2E94E3;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 10px;
+    padding: 0 5px;
+    border-radius: 3px;
+}
+
+/* Lake */
+@keyframes wave {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+

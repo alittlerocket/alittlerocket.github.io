@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { setDayOrNight } from './components/utils/utils';
 import { initClock } from './components/utils/components/Clock'; 
 import { debounce } from './components/utils/Debounce';

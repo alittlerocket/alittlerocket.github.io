@@ -6,23 +6,17 @@ export function moveSun(testTime = null)
     const currentTime = testTime || new Date();
     const totalSeconds = (currentTime.getHours() * 3600) + (currentTime.getMinutes() * 60) + currentTime.getSeconds(); 
     const startSeconds = 6 * 3600; // 6:00 AM
-    const endSeconds = 18 * 3600; // 6:00 PM
 	const duration = 43200;
 
-    let angle;
-    if (startSeconds <= totalSeconds && totalSeconds < endSeconds) {
-        const adjustedSeconds = (totalSeconds >= startSeconds)
-            ? totalSeconds - startSeconds
-            : totalSeconds + (24 * 3600) - startSeconds;
-
-        angle = (adjustedSeconds / duration) * Math.PI;
-    } else {
-        return;
-    }
+    // Determine angle
+    const adjustedSeconds = (totalSeconds >= startSeconds)
+        ? totalSeconds - startSeconds
+        : totalSeconds + (24 * 3600) - startSeconds;
+    const angle = (adjustedSeconds / duration) * Math.PI;
 
     function animate() 
     {
-        const horizontalRadius = (window.innerWidth + 100) / 2;
+        const horizontalRadius = (window.innerWidth + 150) / 2;
         const verticalRadius = window.innerHeight / 3;
         const centerX = window.innerWidth / 2;
         const centerY = window.innerHeight / 2;

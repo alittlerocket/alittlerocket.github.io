@@ -4,22 +4,16 @@ export function moveMoon(testTime = null)
     const moon = document.querySelector('.moon');
 
    // Determine if we're in the active period (6:00 PM to 6:00 AM)
-    const currentTime = testTime || new Date();
-    const totalSeconds = (currentTime.getHours() * 3600) + (currentTime.getMinutes() * 60) + currentTime.getSeconds(); 
-    const startSeconds = 18 * 3600; // 6:00 PM
-    const endSeconds = 6 * 3600; // 6:00 AM
-	const duration = 43200;
+   const currentTime = testTime || new Date();
+   const totalSeconds = (currentTime.getHours() * 3600) + (currentTime.getMinutes() * 60) + currentTime.getSeconds(); 
+   const startSeconds = 18 * 3600; // 6:00 PM
+   const duration = 43200;
 
-    let angle;
-    if (totalSeconds >= startSeconds || totalSeconds < endSeconds) {
-        const adjustedSeconds = (totalSeconds >= startSeconds)
-            ? totalSeconds - startSeconds
-            : totalSeconds + (24 * 3600) - startSeconds;
-
-        angle = (adjustedSeconds / duration) * Math.PI;
-    } else {
-        return;
-    }
+   // Determine angle
+   const adjustedSeconds = (totalSeconds >= startSeconds)
+       ? totalSeconds - startSeconds
+       : totalSeconds + (24 * 3600) - startSeconds;
+   const angle = (adjustedSeconds / duration) * Math.PI;
 
     function animate() 
     {

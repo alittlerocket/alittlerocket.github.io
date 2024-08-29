@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-* 
-{
-    margin: 0;
-    padding: 0;
-}
-
 hr 
 {
     width: 50px;
@@ -55,6 +49,10 @@ body.day .sun {
     opacity: 1;
 }
 
+body.day .clouds {
+    opacity: 1;
+}
+
 /* Night-specific styles */
 body.night .sky {
     background: linear-gradient(to bottom, #000033, #000080);
@@ -77,18 +75,11 @@ body.night .sun {
     opacity: 0;
 }
 
-/*  Reflection */
-.datetime.reflection 
-{
-    transform: scaleY(-1);
-    opacity: 0.5;
-    filter: blur(2px);
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), transparent);
-    pointer-events: none;
+body.night .clouds {
+    opacity: 0;
 }
 
-.datetime:hover,
-.datetime:hover + .reflection 
+.datetime:hover
 {
     background: #2E94E3;
     box-shadow: 0 0 30px #2E94E3;
@@ -114,11 +105,4 @@ body.night .sun {
     padding: 0 5px;
     border-radius: 3px;
 }
-
-/* Lake */
-@keyframes wave {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
-}
-
+  

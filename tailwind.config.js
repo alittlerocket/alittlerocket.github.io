@@ -12,12 +12,18 @@ module.exports = {
         },
         backgroundImage: {
             'cloud-image': "url('/public/assets/images/cloud.png')",
+            'nc1' : "url('/public/assets/images/nc1.png')",
         },
         keyframes: {
             wave: {
-              '0%': { marginTop: '0px' },
-              '50%': { marginTop: '-5px' },
-              '100%': { marginTop: '0px' },
+                '0%': { marginTop: '0px' },
+                '50%': { marginTop: '-5px' },
+                '100%': { marginTop: '0px' },
+            },
+            waveTransform: {
+                '0%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+                '100%': { transform: 'translateY(0)' },
             },
             moveCloud: {
                 '0%': { backgroundPosition: '0 0' },
@@ -26,10 +32,8 @@ module.exports = {
         },
         animation: {
             wave: 'wave 5s cubic-bezier(0.42, 0, 0.58, 1) infinite',
+            waveTransform: 'waveTransform 5s ease-in-out infinite',
             moveCloud: 'moveCloud 300s linear infinite',
-        },
-        width: {
-            '105p': '105%',
         },
         inset: {
             '-30': '-30px',

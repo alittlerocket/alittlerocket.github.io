@@ -2,7 +2,7 @@ import React from 'react';
 
 function DateTimeWrapper() {
   return (
-    <div className="datetime-wrapper absolute inset-0 flex flex-col justify-center items-center z-40">
+    <div className="datetime-wrapper absolute inset-0 flex flex-col justify-center items-center">
       <div className="datetime relative text-white bg-[#10101E] font-sans w-auto pt-5 pb-5 pr-3.5 pl-3.5 text-center rounded animate-wave">
         <div className="date text-xl font-semibold tracking-[0.188em]">
           <span id="nameDay">Day</span>,&nbsp;

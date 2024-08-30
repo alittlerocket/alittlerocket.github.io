@@ -2,15 +2,15 @@ import React from 'react'
 import Sky from './components/Sky';
 import DateTimeWrapper from './components/DateTimeWrapper';
 import Lake from './components/Lake';
-import Overlay from './components/Overlay';
+import GitButton from './components/Buttons';
 
 function App() {
     return (
-      <div className="items-center justify-center relative h-screen flex">
+      <div className="relative flex items-center justify-center h-screen">
         <Sky />
         <Lake />
-        <Overlay />
         <DateTimeWrapper />
+        <GitButton />
       </div>
     );
   }

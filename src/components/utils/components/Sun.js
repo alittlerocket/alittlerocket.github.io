@@ -21,7 +21,7 @@ export function moveSun(testTime = null)
         const centerX = window.innerWidth / 2;
         const centerY = window.innerHeight / 2;
         const x = centerX + horizontalRadius * Math.cos(Math.PI-angle);
-        const y = centerY + verticalRadius * Math.sin(-angle) - 100;
+        const y = centerY + verticalRadius * Math.sin(-angle) - 150;
 
         sun.style.left = `${x-50}px`;
         sun.style.top = `${y}px`;

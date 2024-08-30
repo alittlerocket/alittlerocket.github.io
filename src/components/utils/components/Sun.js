@@ -16,11 +16,11 @@ export function moveSun(testTime = null)
 
     function animate() 
     {
-        const horizontalRadius = (window.innerWidth + 150) / 2;
-        const verticalRadius = window.innerHeight / 3;
+        const horizontalRadius = (window.innerWidth + 150) * 0.5;
+        const verticalRadius = window.innerHeight * (0.2);
         const centerX = window.innerWidth / 2;
         const centerY = window.innerHeight / 2;
-        const x = centerX + horizontalRadius * Math.cos(Math.PI-angle) - 50;
+        const x = centerX + horizontalRadius * Math.cos(Math.PI-angle);
         const y = centerY + verticalRadius * Math.sin(-angle) - 100;
 
         sun.style.left = `${x-50}px`;

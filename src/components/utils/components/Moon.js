@@ -19,9 +19,9 @@ export function moveMoon(testTime = null)
     {
         const horizontalRadius = (window.innerWidth + 100) / 2;
         const verticalRadius = window.innerHeight / 3;
-        const centerX = window.innerWidth / 2;
+        const centerX = window.innerWidth / 2 + 50;
         const centerY = window.innerHeight / 2;
-        const x = centerX + horizontalRadius * Math.cos(Math.PI-angle) - 50;
+        const x = centerX + horizontalRadius * Math.cos(Math.PI-angle);
         const y = centerY + verticalRadius * Math.sin(-angle) - 100;
 
         moon.style.left = `${x-50}px`;

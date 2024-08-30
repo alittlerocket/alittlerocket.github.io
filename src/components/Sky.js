@@ -2,8 +2,8 @@ import React from 'react';
 
 function Sky() {
   return (
-    <div className="sky relative h-screen w-screen z-10">
-      <div className="clouds absolute h-2/5 w-full bg-repeat-x bg-cover bg-cloud-image animate-moveCloud top-0 z-10" />
+    <div className="sky relative h-screen w-screen">
+      <div className="clouds absolute h-2/5 w-full bg-repeat-x bg-cover bg-cloud-image animate-moveCloud top-0" />
       <div className="sun absolute w-24 h-24 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full shadow-lg" style={{ top: '20%', left: '50%', transform: 'translateX(-50%)' }}></div>
       <div className="moon absolute w-24 h-24 bg-gradient-to-br from-gray-400 to-gray-600 rounded-full shadow-lg opacity-0" style={{ top: '20%', left: '50%', transform: 'translateX(-50%)' }}></div>
       <div className="stars absolute h-screen w-screen">

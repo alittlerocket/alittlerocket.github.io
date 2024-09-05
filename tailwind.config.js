@@ -12,7 +12,6 @@ module.exports = {
         },
         backgroundImage: {
             'cloud-image': "url('/public/assets/images/cloud.png')",
-            'nc1' : "url('/public/assets/images/nc1.png')",
         },
         keyframes: {
             wave: {

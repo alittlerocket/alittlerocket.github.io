@@ -1,33 +1,34 @@
 import React from 'react';
 
-function Button({ label, href, bgColor, bgImage, hoverBgImage }) {
+function Button({ label, href, bgColor, bgImage, hoverBgImage, customClass }) {
     return (
-        <div className='flex-col'>
-            <b 
+        <div className={`flex-col ${customClass}`}>
+            <b
                 className='flex justify-center items-center block rounded-xl border-4 h-auto p-2'
                 style={{ backgroundColor: bgColor }}
             >
                 {label}
             </b>
-            <a 
-                href={href} 
-                title={label} 
-                className='block rounded-xl border-4 w-[235px] h-[200px] z-40'
+            <a
+                href={href}
+                title={label}
+                className='button block rounded-xl border-4 w-[200px] h-[170px] z-40'
                 style={{
                     backgroundImage: `url(${bgImage})`,
-                    backgroundColor: bgColor,
+                    backgroundColor: `${bgColor}`,
                     backgroundSize: 'cover',
-                    backgroundPosition: 'center'
+                    backgroundPosition: 'center',
+                    transition: 'all 0.3s ease', // Smooth shrinking
                 }}
                 onMouseEnter={e => {
                     e.currentTarget.style.backgroundImage = `url(${hoverBgImage})`;
-                    e.currentTarget.style.borderColor = 'black'; 
-                    e.currentTarget.style.backgroundColor = 'lightgrey'; 
+                    e.currentTarget.style.borderColor = 'black';
+                    e.currentTarget.style.backgroundColor = 'lightgrey';
                 }}
                 onMouseLeave={e => {
                     e.currentTarget.style.backgroundImage = `url(${bgImage})`;
                     e.currentTarget.style.borderColor = 'white';
-                    e.currentTarget.style.backgroundColor = bgColor; 
+                    e.currentTarget.style.backgroundColor = bgColor;
                 }}
             >
             </a>
@@ -38,20 +39,22 @@ function Button({ label, href, bgColor, bgImage, hoverBgImage }) {
 
 function GitButton() {
     return (
-        <section className='absolute flex flex-wrap justify-between text-4xl text-white font-semibold bottom-[10%] w-full px-16'>
-            <Button 
-                label="GitHub" 
-                href="https://github.com/alittlerocket" 
-                bgColor="#222222" 
-                bgImage="/assets/images/nc1.png" 
-                hoverBgImage="/assets/images/nc2.png" 
+        <section className='buttonWrapper absolute flex flex-wrap bottom-[10%] justify-between text-4xl text-white font-semibold w-full px-16 gap-y-4'>
+            <Button
+                label="GitHub"
+                href="https://github.com/alittlerocket"
+                bgColor="#222222"
+                bgImage="/assets/images/nc1.png"
+                hoverBgImage="/assets/images/nc2.png"
+                customClass="buttonLabel"
             />
-            <Button 
-                label="Resume" 
-                href="https://github.com/alittlerocket" 
-                bgColor="#400000" 
-                bgImage="/assets/images/catread.png" 
-                hoverBgImage="/assets/images/catread.png" 
+            <Button
+                label="Resume"
+                href="https://github.com/alittlerocket"
+                bgColor="#400000"
+                bgImage="/assets/images/catread.png"
+                hoverBgImage="/assets/images/catread.png"
+                customClass="buttonLabel"
             />
             <Button
                 label="Linktree"
@@ -59,6 +62,7 @@ function GitButton() {
                 bgColor="#013220"
                 bgImage="/assets/images/cattree.png"
                 hoverBgImage="/assets/images/cattree.png"
+                customClass="buttonLabel"
             />
         </section>
     );

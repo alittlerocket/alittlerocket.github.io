@@ -54,6 +54,10 @@ body.day .clouds {
     opacity: 1;
 }
 
+body.day .welcome-text {
+    color: black;
+}
+
 /* Night-specific styles */
 body.night .sky {
     background: linear-gradient(to bottom, #000033, #000080);
@@ -78,6 +82,10 @@ body.night .sun {
 
 body.night .clouds {
     opacity: 0;
+}
+
+body.night .welcome-text {
+    color: white;
 }
 
 .datetime:hover
@@ -105,4 +113,48 @@ body.night .clouds {
     margin-top: 10px;
     padding: 0 5px;
     border-radius: 3px;
+}
+
+/* Typing animation */
+.welcome-text {
+    animation:
+        typing 2s,
+        cursor .4s step-end infinite alternate;
+}
+
+@keyframes typing {
+    from { width: 0; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+@media (max-width: 768px) {
+    .button {
+        width: 100px;
+        height: 60px;
+        font-size: small;
+    }
+}
+
+@media (max-width: 768px) {
+    .button {
+        width: 85px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .buttonLabel {
+        width: 85px;
+        height: 40px;
+        font-size: small;
+    }
+}
+
+@media (max-width: 768px) {
+    .buttonWrapper {
+        bottom: 20%;
+    }
 }

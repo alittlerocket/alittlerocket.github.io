@@ -1,6 +1,6 @@
-import { initRain } from "./components/Rain";
-import { moveSun } from "./components/Sun";
-import { moveMoon } from "./components/Moon";
+import { initRain } from "./objects/Rain";
+import { moveSun } from "./objects/Sun";
+import { moveMoon } from "./objects/Moon";
 
 
 export function setDayOrNight() {

@@ -117,8 +117,9 @@ body.night .welcome-text {
 
 /* Typing animation */
 .welcome-text {
+    border-right: 3px solid;
     animation:
-        typing 2s,
+        typing 0.5s steps(20),
         cursor .4s step-end infinite alternate;
 }
 
@@ -126,7 +127,7 @@ body.night .welcome-text {
     from { width: 0; }
 }
 
-@keyframes blink {
+@keyframes cursor {
     50% { border-color: transparent; }
 }
 

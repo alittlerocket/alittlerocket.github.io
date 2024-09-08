@@ -123,6 +123,23 @@ body.night .welcome-text {
         cursor .4s step-end infinite alternate;
 }
 
+.next-button {
+    animation:
+        blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 @keyframes typing {
     from { width: 0; }
 }
@@ -132,30 +149,37 @@ body.night .welcome-text {
 }
 
 @media (max-width: 768px) {
-    .button {
-        width: 100px;
-        height: 60px;
-        font-size: small;
-    }
-}
-
-@media (max-width: 768px) {
-    .button {
-        width: 85px;
-        height: 80px;
-    }
-}
-
-@media (max-width: 768px) {
+    .button,
     .buttonLabel {
-        width: 85px;
-        height: 40px;
+        width: 90px;
+        height: 80px;
         font-size: small;
     }
-}
 
-@media (max-width: 768px) {
+    .time,
+    .time span:last-child,
+    .datetime {
+        font-size: small;
+        margin-top: 2px;
+    }
+
+    .datetime {
+        padding-top: 18px;
+        padding-bottom: 18px;
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+
     .buttonWrapper {
         bottom: 20%;
+    }
+
+    .next-button {
+        font-size: small;
+    }
+
+    .welcome-text {
+        font-size: 12px;
+        border-right: 1px solid;
     }
 }

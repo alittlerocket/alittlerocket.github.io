@@ -1,45 +1,48 @@
 import React, { useEffect, useState } from 'react';
+import { getMessage, getDefaultMessages } from './utils/helpers/getMessage';  // Adjust the path to where your getMessage function is located
 
 const IntroDialogue = () => {
     const [visitCount, setVisitCount] = useState(0);
+    const [message, setMessage] = useState([]);
     const [messageIndex, setMessageIndex] = useState(0);
     const [key, setKey] = useState(0);
 
-    const messages = [
-        "Welcome to the page for the first time!",
-        "Click the button to see the next message.",
-        "Thanks for sticking around!",
-        "This is the final message in the sequence."
-    ];
-
     useEffect(() => {
-        // Get the current number of visits from localStorage
+        const lastVisitTimestamp = localStorage.getItem('lastVisitTimestamp');
+        const currTimestamp = Date.now()
         let visits = parseInt(localStorage.getItem('visitCount') || '0', 10);
 
-        // Increment the visit count
-        setVisitCount(++visits);
+        if ((!lastVisitTimestamp || currTimestamp - lastVisitTimestamp > 12*3600*1000))
+        {
+            localStorage.setItem('lastVisitTimestamp', currTimestamp);
+            setVisitCount(++visits);
+            localStorage.setItem('visitCount', visits);
+        }
 
-        // Store the updated visit count in localStorage
-        localStorage.setItem('visitCount', visits);
+        setMessage(getMessage(visits) || getDefaultMessages());
+
+        
     }, []);
 
     const handleNextMessage = () => {
-        if (messageIndex < messages.length - 1) {
+        if (messageIndex < message.length - 1) {
             setMessageIndex(messageIndex + 1);
-            setKey(prevKey => prevKey + 1);
+            setKey(prevKey => prevKey + 1);  // Force re-render to replay animation
         }
     };
     
     return (
-        <div className="absolute top-[25%] inline-block z-40">
-            <p key={key} className="welcome-text font-mono text-4xl whitespace-nowrap overflow-hidden w-full">{messages[messageIndex]}</p>
+        <div className="absolute top-[15%] inline-block z-40">
+            <p key={key} className="welcome-text font-mono text-2xl whitespace-nowrap overflow-hidden w-full">
+                {message[messageIndex]}
+            </p>
         
-            {messageIndex < messages.length - 1 && (
+            {messageIndex < message.length - 1 && (
                 <button 
-                    className="mt-4 px-4 py-2 bg-blue-500 hover:bg-blue-700 text-white font-bold rounded"
+                    className="next-button text-xl px-4 py-2 text-black font-bold rounded"
                     onClick={handleNextMessage}
                 >
-                    Next
+                    =={'>'}
                 </button>
             )}
         </div>

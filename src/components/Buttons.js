@@ -18,7 +18,7 @@ function Button({ label, href, bgColor, bgImage, hoverBgImage, customClass }) {
                     backgroundColor: `${bgColor}`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
-                    transition: 'all 0.3s ease', // Smooth shrinking
+                    transition: 'all 0.2s ease', // Smooth shrinking
                 }}
                 onMouseEnter={e => {
                     e.currentTarget.style.backgroundImage = `url(${hoverBgImage})`;

@@ -32,7 +32,7 @@ module.exports = {
         animation: {
             wave: 'wave 5s cubic-bezier(0.42, 0, 0.58, 1) infinite',
             waveTransform: 'waveTransform 5s ease-in-out infinite',
-            moveCloud: 'moveCloud 300s linear infinite',
+            moveCloud: 'moveCloud 900s linear infinite',
         },
         inset: {
             '-30': '-30px',

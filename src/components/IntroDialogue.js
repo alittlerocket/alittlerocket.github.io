@@ -17,9 +17,10 @@ const IntroDialogue = () => {
             localStorage.setItem('lastVisitTimestamp', currTimestamp);
             setVisitCount(++visits);
             localStorage.setItem('visitCount', visits);
+            setMessage(getMessage(visits));
+        } else {
+            setMessage(getDefaultMessages())
         }
-
-        setMessage(getMessage(visits) || getDefaultMessages());
 
         
     }, []);

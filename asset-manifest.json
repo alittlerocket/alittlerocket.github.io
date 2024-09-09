@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/solitude/static/css/main.8a82ac23.css",
-    "main.js": "/solitude/static/js/main.ac35d09c.js",
-    "static/media/cloud.png": "/solitude/static/media/cloud.24b58de5a50c89250096.png",
-    "index.html": "/solitude/index.html",
-    "main.8a82ac23.css.map": "/solitude/static/css/main.8a82ac23.css.map",
-    "main.ac35d09c.js.map": "/solitude/static/js/main.ac35d09c.js.map"
+    "main.css": "/solitude-react/static/css/main.9803dc8d.css",
+    "main.js": "/solitude-react/static/js/main.0c8ff2b3.js",
+    "static/media/cloud.png": "/solitude-react/static/media/cloud.24b58de5a50c89250096.png",
+    "index.html": "/solitude-react/index.html",
+    "main.9803dc8d.css.map": "/solitude-react/static/css/main.9803dc8d.css.map",
+    "main.0c8ff2b3.js.map": "/solitude-react/static/js/main.0c8ff2b3.js.map"
   },
   "entrypoints": [
-    "static/css/main.8a82ac23.css",
-    "static/js/main.ac35d09c.js"
+    "static/css/main.9803dc8d.css",
+    "static/js/main.0c8ff2b3.js"
   ]
 }

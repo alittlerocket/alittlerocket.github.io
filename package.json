@@ -1,6 +1,6 @@
 {
-  "homepage": "http://alittlerocket.github.io/solitude-react",
-  "name": "solitude-react",
+  "homepage": "http://alittlerocket.github.io",
+  "name": "solitude",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -8,7 +8,7 @@ function Lake() {
         width: '105%',
         bottom: '-30px',
         height: 'calc(60% + 30px)',
-        backgroundImage: 'url(/assets/gifs/lake.gif)',
+        backgroundImage: 'url(${process.env.PUBLIC_URL}/assets/gifs/lake.gif)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}

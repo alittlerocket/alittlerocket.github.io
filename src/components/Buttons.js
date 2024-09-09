@@ -39,7 +39,7 @@ function Button({ label, href, bgColor, bgImage, hoverBgImage, customClass }) {
 
 function GitButton() {
     return (
-        <section className='buttonWrapper absolute flex flex-wrap bottom-[10%] justify-between text-4xl text-white font-semibold w-full px-16 gap-y-4'>
+        <section className='buttonWrapper absolute flex flex-wrap bottom-[10%] justify-between text-4xl text-white font-semibold w-full px-16 gap-y-4 z-40'>
             <Button
                 label="GitHub"
                 href="https://github.com/alittlerocket"

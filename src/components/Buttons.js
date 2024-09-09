@@ -44,24 +44,24 @@ function GitButton() {
                 label="GitHub"
                 href="https://github.com/alittlerocket"
                 bgColor="#222222"
-                bgImage="${process.env.PUBLIC_URL}/assets/images/nc1.png"
-                hoverBgImage="${process.env.PUBLIC_URL}/assets/images/nc2.png"
+                bgImage={`${process.env.PUBLIC_URL}/assets/images/nc1.png`}
+                hoverBgImage={`${process.env.PUBLIC_URL}/assets/images/nc2.png`}
                 customClass="buttonLabel"
             />
             <Button
                 label="Resume"
                 href="https://www.linkedin.com/in/zhangm21/overlay/1710977198022/single-media-viewer/?profileId=ACoAADdirVsBt3Cp3b25yqaJuddlF9sQJYgB9qg"
                 bgColor="#400000"
-                bgImage="${process.env.PUBLIC_URL}/assets/images/catread.png"
-                hoverBgImage="${process.env.PUBLIC_URL}/assets/images/catread.png"
+                bgImage={`${process.env.PUBLIC_URL}/assets/images/catread.png`}
+                hoverBgImage={`${process.env.PUBLIC_URL}/assets/images/catread.png`}
                 customClass="buttonLabel"
             />
             <Button
                 label="Linktree"
                 href="https://linktr.ee/alittlerocket"
                 bgColor="#013220"
-                bgImage="${process.env.PUBLIC_URL}/assets/images/cattree.png"
-                hoverBgImage="${process.env.PUBLIC_URL}/assets/images/cattree.png"
+                bgImage={`${process.env.PUBLIC_URL}/assets/images/cattree.png`}
+                hoverBgImage={`${process.env.PUBLIC_URL}/assets/images/cattree.png`}
                 customClass="buttonLabel"
             />
         </section>

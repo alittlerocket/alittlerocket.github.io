@@ -50,7 +50,7 @@ function GitButton() {
             />
             <Button
                 label="Resume"
-                href="https://github.com/alittlerocket"
+                href="https://www.linkedin.com/in/zhangm21/overlay/1710977198022/single-media-viewer/?profileId=ACoAADdirVsBt3Cp3b25yqaJuddlF9sQJYgB9qg"
                 bgColor="#400000"
                 bgImage="/assets/images/catread.png"
                 hoverBgImage="/assets/images/catread.png"

@@ -43,7 +43,3 @@ This project showcases everything about me — both socially and professionally 
 ## 👋 Acknowledgments
 
 Thanks for stopping by and interacting with **Solitude**! I hope you enjoy exploring this project as much as I enjoyed building it.
-
----
-
-This enhanced version is more structured, with improved readability and flow, plus optional sections (like Screenshots) to make the README more appealing. Let me know if you'd like further adjustments!

@@ -3,7 +3,7 @@
 **An interactive portfolio built with React and Tailwind CSS!**  
 This project showcases everything about me — both socially and professionally — in a fun, dynamic way. Explore the unique features and interact with the website to learn more about who I am!
 
-## 🛠 Features
+## Features
 
 ### 1. **Interactive Links**
 - Access my GitHub, LinkedIn (including my resume), and LinkTree via the buttons at the bottom of the page. These links will give you deeper insights into my work and connections.
@@ -18,14 +18,14 @@ This project showcases everything about me — both socially and professionally 
 - Meet the interactive **narrator** that offers amusing lines and fun facts about me. 
 - The narrator’s messages refresh every 12 hours, keeping the dialogue fresh and entertaining!
 
-## 📋 How to Interact
+## How to Interact
 
 - You can interact with the narrator by clicking buttons to reveal new, quirky messages.
 - Check back at different times of the day to see the theme and the messages change!
 
-## 🚀 Bugs & Feedback
+## Bugs & Feedback
 
-- Found a bug? Have suggestions or feedback? Feel free to:
+- Feel free to:
   - Open an issue on this repository.
   - Reach me via **Discord**: `littlerocket`
   - Send me an email: [zhang144444@gmail.com](mailto:zhang144444@gmail.com)
@@ -39,7 +39,3 @@ This project showcases everything about me — both socially and professionally 
 - **Local Storage**: To track user interactions and manage theme changes.
 
 ---
-
-## 👋 Acknowledgments
-
-Thanks for stopping by and interacting with **Solitude**! I hope you enjoy exploring this project as much as I enjoyed building it.

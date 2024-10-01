@@ -50,7 +50,8 @@ body.day .clouds {
     opacity: 1;
 }
 
-body.day .welcome-text {
+body.day .welcome-text
+body.night .next-button {
     color: black;
 }
 
@@ -76,7 +77,8 @@ body.night .clouds {
     opacity: 0;
 }
 
-body.night .welcome-text {
+body.night .welcome-text
+body.night .next-button {
     color: white;
 }
 

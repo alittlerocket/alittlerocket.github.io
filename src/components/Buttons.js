@@ -49,15 +49,15 @@ function GitButton() {
                 customClass="buttonLabel"
             />
             <Button
-                label="Resume"
-                href="https://www.linkedin.com/in/zhangm21/overlay/1710977198022/single-media-viewer/?profileId=ACoAADdirVsBt3Cp3b25yqaJuddlF9sQJYgB9qg"
+                label="LinkedIn"
+                href="https://www.linkedin.com/in/zhangm21/"
                 bgColor="#400000"
                 bgImage={`${process.env.PUBLIC_URL}/assets/images/catread.png`}
                 hoverBgImage={`${process.env.PUBLIC_URL}/assets/images/catread.png`}
                 customClass="buttonLabel"
             />
             <Button
-                label="Linktree"
+                label="LinkTree"
                 href="https://linktr.ee/alittlerocket"
                 bgColor="#013220"
                 bgImage={`${process.env.PUBLIC_URL}/assets/images/cattree.png`}

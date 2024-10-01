@@ -40,7 +40,7 @@ const IntroDialogue = () => {
         
             {messageIndex < message.length - 1 && (
                 <button 
-                    className="next-button text-xl px-4 py-2 text-black font-bold rounded"
+                    className="next-button text-xl px-4 py-2 font-bold rounded"
                     onClick={handleNextMessage}
                 >
                     =={'>'}
